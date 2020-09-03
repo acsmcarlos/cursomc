@@ -12,7 +12,6 @@ import javax.persistence.OneToOne;
 
 import com.antonio.cursomc.domain.enums.EstadoPagamento;
 
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
