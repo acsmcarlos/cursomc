@@ -11,7 +11,7 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 import com.antonio.cursomc.domain.enums.EstadoPagamento;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -30,10 +30,10 @@ public abstract class Pagamento implements Serializable {
 	@Id
 	private Integer id;
 	private Integer estado;
-	
+
 	@MapsId
 	@OneToOne
-	@JsonBackReference
+	@JsonIgnore
 	@JoinColumn(name="pedido_id")
 	private Pedido pedido;
 
@@ -43,7 +43,4 @@ public abstract class Pagamento implements Serializable {
 		this.estado = estado.getCod();
 		this.pedido = pedido;
 	}
-	
-	
-
 }

@@ -23,11 +23,11 @@ public class ItemPedido implements Serializable {
 	@JsonIgnore
 	@EmbeddedId
 	private ItemPedidoPK id = new ItemPedidoPK();
-	
+
 	private Double desconto;
 	private Integer quantidade;
 	private Double preco;
-	
+
 	public ItemPedido(Pedido pedido, Produto produto, Double desconto, Integer quantidade, Double preco) {
 		super();
 		id.setPedido(pedido);
@@ -44,6 +44,4 @@ public class ItemPedido implements Serializable {
 	public Produto getpProduto() {
 		return id.getProduto();
 	}
-	
-	
 }
